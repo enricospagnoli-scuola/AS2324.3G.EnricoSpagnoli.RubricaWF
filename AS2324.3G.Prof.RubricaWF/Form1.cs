@@ -19,8 +19,7 @@ namespace AS2324._3G.Prof.RubricaWF
 
         private void btnRicerca_Click(object sender, EventArgs e)
         {
-            if (cmbRicerca.Text == "")
-                MessageBox.Show("E' necessario definire il campo di ricerca.");
+            
         }
 
         private void btnAggiungi_Click(object sender, EventArgs e)
@@ -33,11 +32,21 @@ namespace AS2324._3G.Prof.RubricaWF
             annoNascita[nRecordInseriti] = Convert.ToInt32(txtAnnoNascita.Text);
             nRecordInseriti++;
             lblNRecord.Text = "N. record inseriti: " + nRecordInseriti;
+            txtCognome.Text = "";
+            txtNome.Text = "";
+            txtEmail.Text = "";
+            txtNickName.Text = "";
+            cmbSimpatia.Text = "";
+            txtAnnoNascita.Text = "";
         }
 
         private void btnElenca_Click(object sender, EventArgs e)
         {
-
+            lstElenco.Items.Clear();
+            for (int i = 0; i < nRecordInseriti; i++)
+            {
+                lstElenco.Items.Add($"Nome: {nome[i]}, Cognome: {cognome[i]} Email: {email[i]}, Simpatia: {simpatia[i]}, Anno di nascita: {annoNascita[i]}, Nickname: {nickname[i]}");
+            }
         }
     }
 }
