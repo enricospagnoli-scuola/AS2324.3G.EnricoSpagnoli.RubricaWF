@@ -19,7 +19,123 @@ namespace AS2324._3G.Prof.RubricaWF
 
         private void btnRicerca_Click(object sender, EventArgs e)
         {
-            
+            lstElenco.Items.Clear();
+            if (cmbRicerca.Text == "" || txtRicerca.Text == "")
+                MessageBox.Show("E' necessario definire il campo di ricerca.");
+            string elenco;
+            for (int i = 0; i < nRecordInseriti; i++)
+            {
+                switch (cmbRicerca.Text)
+                {
+                    case "Nome":
+                        switch (cmbOpzioni.Text)
+                        {
+                            case "":
+                                if (txtRicerca.Text == nome[i])
+                                {
+                                    elenco = ($"Nome: {nome[i]}, Cognome: {cognome[i]} Email: {email[i]}, Simpatia: {simpatia[i]}, Anno di nascita: {annoNascita[i]}, Nickname: {nickname[i]}");
+                                    lstElenco.Items.Add(elenco);
+                                }
+                                break;
+                            case "Inizia per":
+                                if (nome[i].StartsWith(txtRicerca.Text))
+                                {
+                                    elenco = ($"Nome: {nome[i]}, Cognome: {cognome[i]} Email: {email[i]}, Simpatia: {simpatia[i]}, Anno di nascita: {annoNascita[i]}, Nickname: {nickname[i]}");
+                                    lstElenco.Items.Add(elenco);
+                                }
+                                break;
+                            case "Finisce per":
+                                if (nome[i].EndsWith(txtRicerca.Text))
+                                {
+                                    elenco = ($"Nome: {nome[i]}, Cognome: {cognome[i]} Email: {email[i]}, Simpatia: {simpatia[i]}, Anno di nascita: {annoNascita[i]}, Nickname: {nickname[i]}");
+                                    lstElenco.Items.Add(elenco);
+                                }
+                                break;
+                            case "Contiene":
+                                if (nome[i].Contains(txtRicerca.Text))
+                                {
+                                    elenco = ($"Nome: {nome[i]}, Cognome: {cognome[i]} Email: {email[i]}, Simpatia: {simpatia[i]}, Anno di nascita: {annoNascita[i]}, Nickname: {nickname[i]}");
+                                    lstElenco.Items.Add(elenco);
+                                }
+                                break;
+                            default:
+                                break;
+                        }
+                        break;
+                    case "Cognome":
+                        switch (cmbOpzioni.Text)
+                        {
+                            case "":
+                                if (txtRicerca.Text == cognome[i])
+                                {
+                                    elenco = ($"Nome: {nome[i]}, Cognome: {cognome[i]} Email: {email[i]}, Simpatia: {simpatia[i]}, Anno di nascita: {annoNascita[i]}, Nickname: {nickname[i]}");
+                                    lstElenco.Items.Add(elenco);
+                                }
+                                break;
+                            case "Inizia per":
+                                if (cognome[i].StartsWith(txtRicerca.Text))
+                                {
+                                    elenco = ($"Nome: {nome[i]}, Cognome: {cognome[i]} Email: {email[i]}, Simpatia: {simpatia[i]}, Anno di nascita: {annoNascita[i]}, Nickname: {nickname[i]}");
+                                    lstElenco.Items.Add(elenco);
+                                }
+                                break;
+                            case "Finisce per":
+                                if (cognome[i].EndsWith(txtRicerca.Text))
+                                {
+                                    elenco = ($"Nome: {nome[i]}, Cognome: {cognome[i]} Email: {email[i]}, Simpatia: {simpatia[i]}, Anno di nascita: {annoNascita[i]}, Nickname: {nickname[i]}");
+                                    lstElenco.Items.Add(elenco);
+                                }
+                                break;
+                            case "Contiene":
+                                if (cognome[i].Contains(txtRicerca.Text))
+                                {
+                                    elenco = ($"Nome: {nome[i]}, Cognome: {cognome[i]} Email: {email[i]}, Simpatia: {simpatia[i]}, Anno di nascita: {annoNascita[i]}, Nickname: {nickname[i]}");
+                                    lstElenco.Items.Add(elenco);
+                                }
+                                break;
+                            default:
+                                break;
+                        }
+                        break;
+                    case "Nickname":
+                        switch (cmbOpzioni.Text)
+                        {
+                            case "":
+                                if (txtRicerca.Text == nickname[i])
+                                {
+                                    elenco = ($"Nome: {nome[i]}, Cognome: {cognome[i]} Email: {email[i]}, Simpatia: {simpatia[i]}, Anno di nascita: {annoNascita[i]}, Nickname: {nickname[i]}");
+                                    lstElenco.Items.Add(elenco);
+                                }
+                                break;
+                            case "Inizia per":
+                                if (nickname[i].StartsWith(txtRicerca.Text))
+                                {
+                                    elenco = ($"Nome: {nome[i]}, Cognome: {cognome[i]} Email: {email[i]}, Simpatia: {simpatia[i]}, Anno di nascita: {annoNascita[i]}, Nickname: {nickname[i]}");
+                                    lstElenco.Items.Add(elenco);
+                                }
+                                break;
+                            case "Finisce per":
+                                if (nickname[i].EndsWith(txtRicerca.Text))
+                                {
+                                    elenco = ($"Nome: {nome[i]}, Cognome: {cognome[i]} Email: {email[i]}, Simpatia: {simpatia[i]}, Anno di nascita: {annoNascita[i]}, Nickname: {nickname[i]}");
+                                    lstElenco.Items.Add(elenco);
+                                }
+                                break;
+                            case "Contiene":
+                                if (nickname[i].Contains(txtRicerca.Text))
+                                {
+                                    elenco = ($"Nome: {nome[i]}, Cognome: {cognome[i]} Email: {email[i]}, Simpatia: {simpatia[i]}, Anno di nascita: {annoNascita[i]}, Nickname: {nickname[i]}");
+                                    lstElenco.Items.Add(elenco);
+                                }
+                                break;
+                            default:
+                                break;
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
 
         private void btnAggiungi_Click(object sender, EventArgs e)
