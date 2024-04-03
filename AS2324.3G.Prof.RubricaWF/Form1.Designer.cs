@@ -40,6 +40,7 @@
             label6 = new Label();
             txtAnnoNascita = new TextBox();
             groupBox1 = new GroupBox();
+            btnAggiungi = new Button();
             txtCognome = new TextBox();
             lblNRecord = new Label();
             groupBox2 = new GroupBox();
@@ -50,7 +51,6 @@
             btnElenca = new Button();
             label7 = new Label();
             txtRicerca = new TextBox();
-            btnAggiungi = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -112,7 +112,7 @@
             txtNickName.Location = new Point(382, 52);
             txtNickName.Margin = new Padding(3, 2, 3, 2);
             txtNickName.Name = "txtNickName";
-            txtNickName.Size = new Size(110, 23);
+            txtNickName.Size = new Size(176, 23);
             txtNickName.TabIndex = 1;
             // 
             // label5
@@ -175,6 +175,17 @@
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             groupBox1.Text = "Dati contatto :";
+            // 
+            // btnAggiungi
+            // 
+            btnAggiungi.Location = new Point(255, 110);
+            btnAggiungi.Margin = new Padding(3, 2, 3, 2);
+            btnAggiungi.Name = "btnAggiungi";
+            btnAggiungi.Size = new Size(116, 54);
+            btnAggiungi.TabIndex = 6;
+            btnAggiungi.Text = "Aggiungi";
+            btnAggiungi.UseVisualStyleBackColor = true;
+            btnAggiungi.Click += btnAggiungi_Click;
             // 
             // txtCognome
             // 
@@ -261,6 +272,7 @@
             btnElenca.TabIndex = 2;
             btnElenca.Text = "Elenca";
             btnElenca.UseVisualStyleBackColor = true;
+            btnElenca.Click += btnElenca_Click;
             // 
             // label7
             // 
@@ -278,16 +290,6 @@
             txtRicerca.Name = "txtRicerca";
             txtRicerca.Size = new Size(156, 23);
             txtRicerca.TabIndex = 1;
-            // 
-            // btnAggiungi
-            // 
-            btnAggiungi.Location = new Point(255, 110);
-            btnAggiungi.Margin = new Padding(3, 2, 3, 2);
-            btnAggiungi.Name = "btnAggiungi";
-            btnAggiungi.Size = new Size(116, 54);
-            btnAggiungi.TabIndex = 6;
-            btnAggiungi.Text = "Aggiungi";
-            btnAggiungi.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 

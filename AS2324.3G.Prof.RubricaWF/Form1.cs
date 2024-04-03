@@ -3,7 +3,6 @@ namespace AS2324._3G.Prof.RubricaWF
     public partial class Form1 : Form
     {
         const int nMaxContatti = 100;
-
         int nRecordInseriti = 0;
 
         // definizione array paralleli
@@ -22,6 +21,23 @@ namespace AS2324._3G.Prof.RubricaWF
         {
             if (cmbRicerca.Text == "")
                 MessageBox.Show("E' necessario definire il campo di ricerca.");
+        }
+
+        private void btnAggiungi_Click(object sender, EventArgs e)
+        {
+            cognome[nRecordInseriti] = txtCognome.Text;
+            nome[nRecordInseriti] = txtNome.Text;
+            email[nRecordInseriti] = txtEmail.Text;
+            nickname[nRecordInseriti] = txtNickName.Text;
+            simpatia[nRecordInseriti] = Convert.ToInt32(cmbSimpatia.Text);
+            annoNascita[nRecordInseriti] = Convert.ToInt32(txtAnnoNascita.Text);
+            nRecordInseriti++;
+            lblNRecord.Text = "N. record inseriti: " + nRecordInseriti;
+        }
+
+        private void btnElenca_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
